@@ -1,19 +1,18 @@
-.container
-	background: #ffffff
-	width: 1170px
-	height: 80px
-	// border: 1px solid red
-	margin: auto
-	display: flex
-	align-items: center
-	justify-content: space-between
-	z-index: 1
-	
 .navbar
 	position: fixed
 	left: 0
 	top: 0
 	width: 100%
+	&-container
+		background: #ffffff
+		width: 1170px
+		height: 80px
+		// border: 1px solid red
+		margin: auto
+		display: flex
+		align-items: center
+		justify-content: space-between
+		z-index: 1
 
 .menu
 		position: fixed
@@ -25,7 +24,7 @@
 		&_active
 			transform: translateY(0%)
 		&-wrap
-			background-color: #507fe1;
+			background-color: #507fe1
 			height: 40px
 			justify-content: space-around
 		&__link

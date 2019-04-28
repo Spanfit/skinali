@@ -4,8 +4,37 @@ body
 .text__bold
 	+bold
 
+.input
+	height: 80px
+	padding-left: 122px
+	border: 1px solid #dddddd
+
+input[type='checkbox']
+	display: none
+	&:checked + label:before
+			background: green
+.checkbox
+	&-label
+		display: flex
+		align-items: center
+		margin-right: 42px
+		&:hover
+			cursor: pointer
+		&:before
+			content: ''
+			width: 30px
+			height: 30px
+			border: 1px solid #dddddd
+			margin-right: 20px
+@media (max-width: 576px)
+	.button
+		font-size: 10px
+
 .button
 	font-size: 15px
 	padding: 25px 45px
 	color: #ffffff
 	background-color: #507fe1
+
+$bg-secondary: #f1f1f1
+	
