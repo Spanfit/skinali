@@ -125,6 +125,10 @@ input[type='checkbox']:checked + label:before {
   text-decoration: none;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .button-fitting {
   color: #6a99e9;
   background-color: #fff;
@@ -440,6 +444,33 @@ input[type='checkbox']:checked + label:before {
   .form__input {
     margin-bottom: 20px;
   }
+  .form__input::-webkit-input-placeholder {
+    text-overflow: none;
+  }
+  .form__input:-ms-input-placeholder {
+    text-overflow: none;
+  }
+  .form__input::-ms-input-placeholder {
+    text-overflow: none;
+  }
+  .form__input::placeholder {
+    text-overflow: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .form__row-checkbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .form__checkbox {
+    margin-bottom: 20px;
+  }
 }
 
 .features-block {
@@ -625,6 +656,83 @@ input[type='checkbox']:checked + label:before {
         justify-content: space-around;
     margin-right: 30px;
     margin-left: 30px;
+  }
+}
+
+.price {
+  background-color: #ffffff;
+}
+
+.price-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.price-block__card {
+  margin-bottom: 10px;
+}
+
+.price-card {
+  position: relative;
+  background-color: #fff;
+}
+
+.price-card__text {
+  padding: 20px;
+  font-size: 15px;
+}
+
+.price-card__title {
+  margin: 0;
+}
+
+.price-card__cost {
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.price-card__pricetag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.price-card__button {
+  text-align: center;
+  position: absolute;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 80px;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.price-card:hover .price-card__button {
+  z-index: 99;
+  bottom: -80px;
+}
+
+@media (max-width: 991px) {
+  .price-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .price-block__card {
+    margin: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
