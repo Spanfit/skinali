@@ -259,13 +259,10 @@ input[type='checkbox']:checked + label:before {
 }
 
 .navbar-hidden {
-  display: none;
   position: fixed;
   background-color: #507fe1;
   width: 100%;
   z-index: 98;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
 }
 
 .navbar-hidden__block {
@@ -337,7 +334,7 @@ input[type='checkbox']:checked + label:before {
   width: 25px;
   height: 3px;
   margin: 8px;
-  border-radius: 30%;
+  border-radius: 10%;
 }
 
 @media (max-width: 860px) {
@@ -1214,5 +1211,16 @@ input[type='checkbox']:checked + label:before {
 .arrow-right {
   -webkit-transform: translateX(200%);
           transform: translateX(200%);
+}
+
+@media (max-width: 610px) {
+  .arrow-left {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  .arrow-right {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
 }
 /*# sourceMappingURL=style.css.map */
