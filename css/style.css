@@ -1216,12 +1216,12 @@ input[type='checkbox']:checked + label:before {
 
 @media (max-width: 610px) {
   .arrow-left {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateX(-70%);
+            transform: translateX(-70%);
   }
   .arrow-right {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(70%);
+            transform: translateX(70%);
   }
 }
 /*# sourceMappingURL=style.css.map */
