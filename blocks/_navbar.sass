@@ -1,106 +1,85 @@
 .navbar
+	width: 100%
+	height: 80px
 	position: fixed
 	left: 0
 	top: 0
-	width: 100%
-	z-index: 1
-	&-container
-		background: #ffffff
-		width: 1170px
-		height: 80px
-		// border: 1px solid red
-		margin: auto
-		display: flex
-		align-items: center
-		justify-content: space-between
-		z-index: 100
-
-.menu
+	background-color: white
+	z-index: 99
+	&-hidden
+		display: none
 		position: fixed
-		top: 80px
-		left: 0
+		background-color: #507fe1
 		width: 100%
-		transform: translateY(-100%)
-		z-index: -1
-		&_active
-			transform: translateY(0%)
-		&-wrap
+		z-index: 98
+		transform: translateY(0px)
+		&__block
+			display: flex
+			padding: 15px
+			justify-content: space-between
+	&__link
+		color: white
+		text-decoration: none
+			
+	&-block
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 5px
+	&-title
+		text-transform: uppercase
+		font-size: 18px
+		+bold
+	&__text
+		font-size: 14px
+		color: #6b6b6b
+	&__phone
+		text-align: right
+	&__landline
+		text-align: right
+	&__button
+		text-transform: uppercase
+		color: #507fe1
+		padding: 18px
+		border: 2px solid #507fe1
+		cursor: pointer
+	&-nav
+		cursor: pointer
+		margin-top: -5px 
+		padding: 20px
+		height: 82px
+		border-left: 1px solid #f1f1f1
+		border-right: 1px solid #f1f1f1
+		// background-color: red
+		&__menu
 			background-color: #507fe1
-			height: 40px
-			justify-content: space-around
-		&__link
-			color: white
-			text-decoration: none
-		
+			width: 25px
+			height: 3px
+			margin: 8px
+			border-radius: 30%
 
-.button__nav
-	display: flex
-	align-items: center
-	flex-direction: column
-	justify-content: center
-	border: none
-	border-left: 1px solid rgba(#507fe1, 0.1)
-	border-right: 1px solid rgba(#507fe1, 0.1)
-	height: 80px
-	width: 70px
-	background: transparent
-	
-
-.button__line
-	display: block
-	width: 20px
-	height: 2px
-	background-color: #5482e2
-	margin: 2px
-	
-.navbar__logotipe
-	flex-direction: column
-	// border: 1px solid red
-	display: flex
-	text-align: right
-	
-
-.navbar__contact
-	flex-direction: column
-	// border: 1px solid red
-	display: flex
-	text-align: right
-	
-	
-
-.navbar__landline
-	flex-direction: column
-	// border: 1px solid red
-	display: flex
-	text-align: right
-
-.navbar__content
-	margin-right: 55px
-
-.text__bold
-	text-decoration: none
-	color: black
-	font-size: 18px
-
-.text__color
-	color: #7b7b79
-	font-size: 14px
-
-.button__consultation
-	background: transparent
-	font-size: 12px
-	border: 2px solid #507fe1
-	color: #507fe1
-	text-transform: uppercase
-	padding: 17px 22px
-	+bold
-
-@media (max-width: 991px)
+@media (max-width: 860px)
 	.navbar
-		&__contact, &__landline
+		&__phone
+			display: none
+		&-hidden
+			flex-direction: column
+			&__block
+				align-items: center
+				flex-direction: column
+
+
+@media (max-width: 700px)
+	.navbar
+		&__landline
 			display: none
 
-@media (max-width: 600px)
+@media (max-width: 550px)
 	.navbar
-		&__logotipe
-			display: none
+		&-block
+			&__title
+				display: none
+		&__button
+			margin: auto
+
+

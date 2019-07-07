@@ -6,44 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/twentytwenty.css">
+    <script type="text/javascript" src="js/index.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="navbar">
-            <div class="menu">
-                <div class="container menu-wrap">
-                    <a href="#" class="menu__link">Главная</a>
-                    <a href="#" class="menu__link">Продукция</a>
-                    <a href="#" class="menu__link">Каталог</a>
-                    <a href="#" class="menu__link">Примеры работ</a>
-                    <a href="#" class="menu__link">Примерка изображений</a>
-                    <a href="#" class="menu__link">Стоимость дирелам</a>
-                    <a href="#" class="menu__link">О скинaли</a>
-                </div>
-            </div>
-            <div class="navbar-container container">
-                <button class="button__nav">
-                    <span class="button__line"></span>
-                    <span class="button__line"></span>
-                    <span class="button__line"></span>
-                </button>
-                <div class="navbar__logotipe navbar__content">
-                    <span class='navbar__logo text__bold'>ФАБРИКА СКИНАЛИ №1</span>
-                    <span class="text__color navbar__text">ведущий производитель скинали</span>
-                </div>
-                <div class="navbar__contact navbar__content">
-                    <a class="text__bold " href="#">+7 912 123-45-67</a>
-                    <span class="text__color">без выходных 9-21</span>
-                </div>
-                <div class="navbar__landline navbar__content">
-                    <a class="text__bold" href="#">+7 499 123-45-67</a>
-                    <a class="text__color" href="#">info!mail.cu</a>
-                </div>
-                <button class="button__consultation ">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+        <div class="navbar-hidden" id="menu">
+            <div class="navbar-hidden__block container">
+                <a href="#" class="navbar__link">ГЛАВНАЯ</a>
+                <a href="#" class="navbar__link">ПРОДУКЦИЯ</a>
+                <a href="#" class="navbar__link">КАТАЛОГ</a>
+                <a href="#" class="navbar__link">ПРИМЕРЫ РАБОТ</a>
+                <a href="#" class="navbar__link">ПРИМЕРКА ИЗОБРАЖЕНИЙ</a>
+                <a href="#" class="navbar__link">СТОИМОСТЬ ДИЛЕРАМ</a>
+                <a href="#" class="navbar__link">О СКИНАЛИ</a>
             </div>
         </div>
+        </div>
+            <div class="navbar header-navbar">
+                <div class="navbar-block container">
+                    <div class="navbar-nav" id="button">
+                        <div class="navbar-nav__menu"></div>
+                        <div class="navbar-nav__menu"></div>
+                        <div class="navbar-nav__menu"></div>
+                    </div>
+                    <div class="navbar-block__title">
+                        <div class="navbar-title">Фабрика скинали №1</div>
+                        <span class="navbar__text">ведущий производитель скинали</span>
+                    </div>
+                    <div class="navbar__phone">
+                        <div class="navbar-title">+7 912 123-45-67</div>
+                        <span class="navbar__text">без выходных 9-21</span>
+                    </div>
+                    <div class="navbar__landline">
+                        <div class="navbar-title">+7 499 123-45-67</div>
+                        <span class="navbar__text">info!mail.cu</span>
+                    </div>
+                    <div class="navbar__button">
+                        <div class="navbar-button">Получить консультацию</div>
+                    </div>
+                </div>
+            </div>
         <div class="hero">
             <div class="container container-hero">
                 <h1 class="hero__title">Гарантия <br> минимальной цены <br> на скинали</h1>
@@ -391,6 +396,41 @@
                 </div>
             </div>
         </section>
+        <section class="section before">
+            <div class="container">
+                <h2 class="section-title section__title">До и после</h2>
+                <div class="before-slider-wrap">
+                    <div class="before-slider">
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before-slider/sample-before.png" alt="">
+                                <img src="img/before-slider/sample-after.png" alt="">
+                            </div>
+                        </div>
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before-slider/sample-before.png" alt="">
+                                <img src="img/before-slider/sample-after.png" alt="">
+                            </div>
+                        </div>
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before-slider/sample-before.png" alt="">
+                                <img src="img/before-slider/sample-after.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="before-slider-arrows">
+                        <button class="arrow arrow-left">
+                            <img src="img/before-slider/left.png" alt="">
+                        </button>
+                        <button class="arrow arrow-right">
+                            <img src="img/before-slider/right.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="section reviews">
             <div class="container">
                 <h2 class="section-title section__titlle">
@@ -538,7 +578,26 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="https://spikmi.com/Widget?Id=731"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+        $(window).load(function () {
+            $(".before-after").twentytwenty({
+                before_label: 'Без скинали', // Set a custom before label
+                after_label: 'Со скинали', // Set a custom after label
+            });
+            $('.before-slider').slick({
+                draggable: false,
+                dots: true,
+                dotsClass: 'before-slider__dots',
+                prevArrow: $('.arrow-left'),
+                nextArrow: $('.arrow-right')
+            });
+        });
+    </script>
 </body>
 
 </html>
