@@ -1215,13 +1215,8 @@ input[type='checkbox']:checked + label:before {
 }
 
 @media (max-width: 610px) {
-  .arrow-left {
-    -webkit-transform: translateX(-70%);
-            transform: translateX(-70%);
-  }
-  .arrow-right {
-    -webkit-transform: translateX(70%);
-            transform: translateX(70%);
+  .before-slider-arrows {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
