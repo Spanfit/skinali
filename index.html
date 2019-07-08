@@ -13,10 +13,10 @@
 
 <body>
     <header class="header">
-        <div class="navbar-hidden" id="menu" style="display:none">
+        <div class="navbar-hidden" id="menu" style="transform: translateY(-200px)">
             <div class="navbar-hidden__block container">
                 <a href="#" class="navbar__link">ГЛАВНАЯ</a>
-                <a href="#" class="navbar__link">ПРОДУКЦИЯ</a>
+                <a href="#features" class="navbar__link">ПРЕИМУЩЕСТВА</a>
                 <a href="#" class="navbar__link">КАТАЛОГ</a>
                 <a href="#" class="navbar__link">ПРИМЕРЫ РАБОТ</a>
                 <a href="#" class="navbar__link">ПРИМЕРКА ИЗОБРАЖЕНИЙ</a>
@@ -45,7 +45,7 @@
                         <span class="navbar__text">info!mail.cu</span>
                     </div>
                     <div class="navbar__button">
-                        <div class="navbar-button">Получить консультацию</div>
+                        <a href='#offer' class="navbar-button">Получить консультацию</a>
                     </div>
                 </div>
             </div>
@@ -53,30 +53,37 @@
             <div class="container container-hero">
                 <h1 class="hero__title">Гарантия <br> минимальной цены <br> на скинали</h1>
                 <span class="hero__subtitle">от 3 000 р/м2</span>
-                <button class="button herro__button">Заказать скинали</button>
+                <a href="#offer" class="button herro__button">Заказать скинали</a>
             </div>
         </div>
     </header>
     <!-- ШАПКА -->
     <main>
-        <section class="offer bg-secondary">
+        <section class="offer bg-secondary" id="offer">
             <div class="container">
                 <div class="offer__block offer-block offer-block_calc-bg ">
                     <h2 class="offer__title">ОСТАВЬТЕ ЗАЯВКУ НА РАСЧЕТ</h2>
                     <span class="offer__subtitle">и получите скидку 30% на изготовление скинали или фартука для кухни</span>
-                    <form action="#" class="form offer__form">
+                    <form action="mail.php" method="POST" class="form offer__form">
                         <div class="form__row">
-                            <div class="for__group">
+                            <div class="form__group">
                                 <label for="" class="form__label">Вид стекла</label>
-                                <input type="text" class="input form__input">
+                                <input type="hidden" name="user_type" id="select-type" value="С печатью">
+                                <div class="select form__select">
+                                    <div class="select_checked">С печатью</div>
+                                    <ul class="select__dropdown">
+                                        <li class="select__option" data-value="С печатью">С печатью</li>
+                                        <li class="select__option" data-value="Без печати">Без печати</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="form__group">
                                 <label for="" class="form__label">Ширина, см</label>
-                                <input type="text" class="input form__input">
+                                <input type="text" name="user_width" class="input form__input">
                             </div>
                             <div class="form__group">
                                 <label for="" class="form__label">Высота, см</label>
-                                <input type="text" class="input form__input">
+                                <input type="text" name="user_height" class="input form__input">
                             </div>
                         </div>
                         <div class="form__row form__row-checkbox">
@@ -95,20 +102,20 @@
                         </div>
                             <div class="form__row">
                                 <div class="form__group">
-                                    <input type="text" class="form__input input" placeholder="Ваше имя">
+                                    <input type="text" name="user_name" class="form__input input" placeholder="Ваше имя">
                                 </div>
                                 <div class="form__group">
-                                    <input type="tel" class="form__input input" placeholder="Ваш телефон">
+                                    <input type="tel" name="user_phone" class="form__input input" placeholder="Ваш телефон">
                                 </div>
                                 <div class="form__group">
-                                    <input type="submit" class="button form__button" value="Получить скидку">
+                                    <button type="submit" class="button form__button" value="Получить скидку">ПОЛУЧИТЬ СКИДКУ</button>
                                 </div>
                             </div>
                     </form>
                 </div>
             </div>
         </section>
-        <section class="features section">
+        <section class="features section" id="features">
             <div class="container">
                 <h2 class="section-title section__title">НАШИ ПРЕИМУЩЕСТВА</h2>
                 <div class="features-block">
@@ -583,21 +590,7 @@
     <script src="js/jquery.event.move.js"></script>
     <script src="js/jquery.twentytwenty.js"></script>
     <script src="js/slick.min.js"></script>
-    <script>
-        $(window).load(function () {
-            $(".before-after").twentytwenty({
-                before_label: 'Без скинали', // Set a custom before label
-                after_label: 'Со скинали', // Set a custom after label
-            });
-            $('.before-slider').slick({
-                draggable: false,
-                dots: true,
-                dotsClass: 'before-slider__dots',
-                prevArrow: $('.arrow-left'),
-                nextArrow: $('.arrow-right')
-            });
-        });
-    </script>
+   
 </body>
 
 </html>
