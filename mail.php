@@ -9,6 +9,11 @@ $phone = $_POST['user_phone'];
 $width = $_POST['user_width'];
 $height = $_POST['user_height'];
 $type = $_POST['user_type'];
+$check = $_POST['check_m'];
+$check = $_POST['check_d'];
+$names = $_POST['name'];
+$phones = $_POST['phone'];
+$sale = $_POST['sale'];
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
@@ -31,7 +36,7 @@ $mail->addAddress('akuzin481@gmail.com');     // Кому будет уходи�
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Заявка с тестового сайта';
-$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Ширина: ' .$width. '<br>Высота: ' .$height. '<br>Вид стекла: ' .$type ;
+$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Ширина: ' .$width. '<br>Высота: ' .$height. '<br>Вид стекла: ' .$type. '<br>Монтаж ' .$check_m. '<br>Доставка ' .$check_d ;
 $mail->AltBody = '';
 
 if(!$mail->send()) {

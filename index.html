@@ -17,11 +17,11 @@
             <div class="navbar-hidden__block container">
                 <a href="#" class="navbar__link">ГЛАВНАЯ</a>
                 <a href="#features" class="navbar__link">ПРЕИМУЩЕСТВА</a>
-                <a href="#" class="navbar__link">КАТАЛОГ</a>
-                <a href="#" class="navbar__link">ПРИМЕРЫ РАБОТ</a>
-                <a href="#" class="navbar__link">ПРИМЕРКА ИЗОБРАЖЕНИЙ</a>
-                <a href="#" class="navbar__link">СТОИМОСТЬ ДИЛЕРАМ</a>
-                <a href="#" class="navbar__link">О СКИНАЛИ</a>
+                <a href="#catalog" class="navbar__link">КАТАЛОГ</a>
+                <a href="#price" class="navbar__link">ПРИМЕРЫ РАБОТ</a>
+                <a href="#before" class="navbar__link">ПРИМЕРКА ИЗОБРАЖЕНИЙ</a>
+                <a href="#offerSale" class="navbar__link">СТОИМОСТЬ ДИЛЕРАМ</a>
+                <a href="#factory" class="navbar__link">О СКИНАЛИ</a>
             </div>
         </div>
         </div>
@@ -88,13 +88,13 @@
                         </div>
                         <div class="form__row form__row-checkbox">
                             <div class="form__checkbox">
-                                <input class="checkbox" type="checkbox" id="install">
+                                <input class="checkbox" name="chek_m" checked type="checkbox" id="install">
                                 <label class="checkbox-label" for="install">
                                     Монтаж
                                 </label>
                             </div>
                             <div class="form__checkbox">
-                                <input class="checkbox" type="checkbox" id="delivery">
+                                <input class="checkbox" name="check_d" type="checkbox" id="delivery">
                                 <label class="checkbox-label" for="delivery" >
                                     Доставка
                                 </label>
@@ -158,7 +158,7 @@
                 </div>
             </div>
         </section>
-        <section class="section catalog">
+        <section class="section catalog" id="catalog">
             <div class="container">
                 <h2 class="section-title section__title">КАТАЛОГ СКИНАЛИ</h2>
                 <div class="catalog-block">
@@ -275,7 +275,7 @@
                 </div>
             </div>
         </section>
-        <section class="section price">
+        <section class="section price" id="price">
             <div class="container">
                 <h2 class="section-title section__title">Цены и виды скинали</h2>
                 <div class="price-block">
@@ -403,7 +403,7 @@
                 </div>
             </div>
         </section>
-        <section class="section before">
+        <section class="section before" id="before">
             <div class="container">
                 <h2 class="section-title section__title">До и после</h2>
                 <div class="before-slider-wrap">
@@ -467,26 +467,26 @@
                 </div>
             </div>
         </section>
-        <section class="offer">
+        <section class="offer" id="offerSale">
             <div class="container">
                 <div class="offer__block offer-block offer-block_price-bg">
                     <h2 class="offer__title">ИЩИТЕ ГДЕ ДЕШЕВЛЕ И ЛУЧШЕ?</h2>
                     <span class="offer__subtitle">Если у Вас уже есть расчет от другой фирмы, но Вы хотите цену дешевле, укажите ее - и мы вам пересчитаем заказ с максимальной скидкой</span>
-                    <form action="#" class="form offer__form">
+                    <form action="mail.php" class="form offer__form">
                         <div class="form__row">
                             <div class="for__group">
-                                <input type="text" class="input form__input" placeholder="Ваше имя">
+                                <input type="text" name="names" class="input form__input" placeholder="Ваше имя">
                             </div>
                             <div class="form__group">
-                                <input type="text" class="input form__input" placeholder="Ваш телефон">
+                                <input type="text" name="phones" class="input form__input" placeholder="Ваш телефон">
                             </div>
                             <div class="form__group">
-                                <input type="text" class="input form__input" placeholder="Ваша цена">
+                                <input type="text" name="sale" class="input form__input" placeholder="Ваша цена">
                             </div>
                         </div>
                         <div class="form__row">
                             <div class="form__group">
-                                <input type="submit" class="button form__button form__button-price" value="Получить расчет со скидкой">
+                                <button type="submit" class="button form__button form__button-price" value="Получить расчет со скидкой"></button>
                             </div>
                             <div class="form__group">
                                 <span class="form__policy">Ваши данные надежно защищены. Отправление заявки ни к чему не обязывает.</span>
@@ -496,7 +496,7 @@
                 </div>
             </div>
         </section>
-        <section class="section factory">
+        <section class="section factory" id="factory">
             <div class="container">
                 <h2 class="section-title section_title">
                     О производстве
